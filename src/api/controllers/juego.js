@@ -3,7 +3,7 @@ const Juego = require('../models/juego')
 const getJuegos = async (req, res, next) => {
   try {
     const juegos = await Juego.find()
-    return res.status(200).json(juegos)
+    return res.status(200).json({ juegos })
   } catch (error) {
     return res.status(400).json('error')
   }

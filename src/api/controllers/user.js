@@ -31,7 +31,9 @@ const register = async (req, res, next) => {
 
     const newUser = new User({
       userName: req.body.userName,
+      lastName: req.body.lastName,
       password: req.body.password,
+      email: req.body.email,
       rol: 'user'
     })
     const user = await newUser.save()
